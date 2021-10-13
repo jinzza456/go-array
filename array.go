@@ -29,11 +29,39 @@ func main() {
 	// 	fmt.Print(s2[i], ", ")
 	// }
 
-	s := "Hello 월드"
+	// s := "Hello 월드"
 
-	s2 := []rune(s)
-	fmt.Println("len(s2) = ", len(s2))
-	for i := 0; i < len(s2); i++ {
-		fmt.Print(string(s2[i]), ", ")
-	}
+	// s2 := []rune(s)
+	// fmt.Println("len(s2) = ", len(s2))
+	// for i := 0; i < len(s2); i++ {
+	// 	fmt.Print(string(s2[i]), ", ")
+	// }
+
+	// arr := [5]int{1, 2, 3, 4, 5}
+	// clone := [5]int{}
+
+	// for i := 0; i < 5; i++ {
+	// 	clone[i] = arr[i]
+	// }
+	// fmt.Print(clone)
+
+	// arr := [5]int{1, 2, 3, 4, 5}
+	// temp := [5]int{}
+
+	// for i := 0; i < len(arr); i++ {
+	// 	temp[i] = arr[len(arr)-1-i]
+	// }
+
+	// for i := 0; i < len(arr); i++ {
+	// 	arr[i] = temp[i]
+	// }
+	// fmt.Println("temp:", temp)
+	// fmt.Println("arr:", arr)
+
+	arr := [5]int{1, 2, 3, 4, 5}
+
+	for i := 0; i < len(arr)/2; i++ {
+		arr[i], arr[len(arr)-1-i] = arr[len(arr)-1-i], arr[i]
+	} // arr[0],arr[4] = 5, 1
+	fmt.Println(arr)
 }
